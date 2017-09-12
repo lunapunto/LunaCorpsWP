@@ -1,0 +1,6 @@
+{
+    "require": {
+        "rollbar/rollbar": "^0.18.2",
+        "wildbit/postmark-php": "^2.3"
+    }
+}

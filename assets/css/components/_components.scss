@@ -1,0 +1,13 @@
+/*
+* Components Loader
+*/
+@import 'reset';
+@import 'containers';
+
+.main{
+  @import 'main/jsconfirm';
+  @import 'main/loader';
+}
+
+.admin{
+}

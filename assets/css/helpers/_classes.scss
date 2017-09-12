@@ -1,0 +1,47 @@
+/*
+* Transición lenta
+* Ejemplo @extend .ta
+*/
+.ta{
+    @include transition(all $animation-duration $animation-timing-function);
+}
+/*
+* Transición rápida
+* Ejemplo @extend .ta_q
+*/
+.ta_q{
+    @include transition(all $animation-duration-quick $animation-timing-function);
+}
+/*
+* Centra verticalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cy{
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+/*
+* Centra horizontalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cx{
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+/*
+* Centra verticalmente y horizontalmente un elemento y asigna posición absoluta relativa al parent
+*/
+.cxy{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%,-50%));
+}
+/*
+* Convierte en flex un elemento
+*/
+.flex{
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}

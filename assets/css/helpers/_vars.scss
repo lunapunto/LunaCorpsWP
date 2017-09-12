@@ -1,0 +1,28 @@
+/*
+*  Stylesheet de variables
+*
+*  1. Colores
+*  2. Fuentes
+*  3. Medidas
+*  4. Media Breakpoints
+*
+*/
+
+//-- 1. Colores --//
+
+//-- 2. Fuentes --//
+$geomanist: 'Geomanist', 'Roboto', sans-serif;
+
+//-- 3. Medidas --//
+$animation-duration: 0.5s;
+$animation-duration-quick: $animation-duration / 2;
+$animation-timing-function: ease-out;
+
+
+//-- 4. Media Breakpoints --//
+$phone-max-width: 480px;
+$tablet-max-width: 1000px;
+$laptop-max-width: 1920px;
+$tablet-min-width: $phone-max-width + 1;
+$laptop-min-width: $tablet-max-width + 1;
+$hires-min-width: $laptop-max-width + 1;

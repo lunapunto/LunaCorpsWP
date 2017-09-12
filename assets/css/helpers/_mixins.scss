@@ -1,0 +1,69 @@
+/*
+* Mixin para hacer compatibilidad web
+*/
+@mixin webcompat($attr, $string){
+    #{$attr} : $string;
+}
+/*
+* Mixin de animation
+* Ejemplo @include animation(fadeIn 3s infinite)
+*/
+@mixin animation($string){
+    @include webcompat(animation,$string);
+}
+/*
+* Mixin de transformación
+* Ejemplo @include animation(rotate(90deg))
+*/
+@mixin transform($string){
+    @include webcompat(transform,$string);
+}
+/*
+* Mixin de transiciones
+* Ejemplo @include transition(all 2s ease)
+*/
+@mixin transition($string){
+    @include webcompat(transition,$string);
+}
+/*
+* Mixin de filtros
+* Ejemplo @include filter(invert(1))
+*/
+@mixin filter($string){
+    @include webcompat(filter, $string);
+}
+/*
+* Mixin media
+*/
+@mixin media(/* List */  $medias){
+  @each $media in $medias{
+    @if $media == phone {
+      @media (max-width: $phone-max-width) { @content; }
+    }
+    @if $media == phone-landscape {
+      @media (max-width: $phone-max-width) and (orientation: landscape){ @content; }
+    }
+    @if $media == tablet {
+      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) { @content; }
+    }
+    @if $media == tablet-landscape {
+      @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) and (orientation: landscape){ @content; }
+    }
+    @if $media == laptop {
+      @media (min-width: $laptop-min-width) and (max-width: $laptop-max-width) { @content; }
+    }
+    @if $media == hires {
+      @media (min-width: $hires-min-width) { @content; }
+    }
+  }
+}
+@mixin width($width, $max-width, $min-width){
+  width: $width;
+  max-width: $max-width;
+  min-width: $min-width;
+}
+@mixin height($height, $max-height, $min-height){
+  height: $height;
+  max-height: $max-height;
+  min-height: $min-height;
+}

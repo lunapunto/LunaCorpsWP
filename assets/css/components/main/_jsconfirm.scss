@@ -1,0 +1,26 @@
+/*
+*  Usar jsconfirmhelper.png como guía
+*  Estilo para customtheme de Confirm JS
+*/
+.jconfirm.jconfirm-customtheme {
+  .jconfirm-bg {}
+  .jconfirm-box {
+    &.loading {
+      &:before {}
+
+      &:after {}
+    }
+
+    .jconfirm-closeIcon {}
+
+    .jconfirm-title-c {}
+
+    .jconfirm-content-pane {}
+
+    .jconfirm-content {}
+
+    .jconfirm-buttons {
+      button {}
+    }
+  }
+}
