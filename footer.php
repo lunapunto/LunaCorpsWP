@@ -3,5 +3,6 @@
 <input type="hidden" name="dir" id="dir" value="<?= dir;?>"/>
 
 </div><!-- #wrapper-->
+<?php wp_footer();?>
 </body>
 </html>

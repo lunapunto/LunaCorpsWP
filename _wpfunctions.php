@@ -59,15 +59,8 @@ function new_gallery($atts){
   foreach($ids as $id){
       $img = wp_get_attachment_url($id);
       $class = '';
-      if($y === 1){
-      $class = 'one_gall';
-      }
-      if($y === 2){
-      $class = 'two_gall';
-      }
-      $deg = rand(-5,5).'deg';
       $bimg = 'url('.$img.')';
-      $o .= '<div onclick="showgal('.$x.')" id="gal_'.$x.'" data-index="'.$x.'" class="'.$class.' gall_thumb" style="transform: rotate('.$deg.'); background-image: '.$bimg.'"><input type="hidden" value="'.$img.'"></div>';
+      $o .= '<div onclick="showgal('.$x.')" id="gal_'.$x.'" data-index="'.$x.'" class="gall_thumb" style="background-image: '.$bimg.'"><input type="hidden" value="'.$img.'"></div>';
       $x++;
   }
   $o .= '<div style="clear: both"></div>';
